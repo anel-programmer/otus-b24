@@ -1,0 +1,17 @@
+{
+    "name": "bitrix/www",
+    "autoload": {
+        "psr-4": {
+            "Bitrix\\Www\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Elena Lukasheva",
+            "email": "anel.pugacheva@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^7.4"
+    }
+}
