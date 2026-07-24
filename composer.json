@@ -1,8 +1,9 @@
 {
-    "name": "bitrix/www",
+    "name": "symfony/var-dumper",
     "autoload": {
         "psr-4": {
-            "Bitrix\\Www\\": "src/"
+            "Symfony\\VarDumper\\": "src/",
+             "MyApp\\": "local/php_interface/src/"
         }
     },
     "authors": [
@@ -11,7 +12,5 @@
             "email": "anel.pugacheva@gmail.com"
         }
     ],
-    "require": {
-        "symfony/var-dumper": "^7.4"
-    }
+    "require": {}
 }
