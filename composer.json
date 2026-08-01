@@ -1,5 +1,5 @@
 {
-    "name": "symfony/var-dumper",
+    "name": "my-project/var-dumper",
     "autoload": {
         "psr-4": {
             "Symfony\\VarDumper\\": "src/",
@@ -12,5 +12,7 @@
             "email": "anel.pugacheva@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^8.1"
+    }
 }
