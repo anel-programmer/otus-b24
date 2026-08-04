@@ -1,5 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-// ТУТ ДОБАВИТЬ СВОЮ ФУНКЦИЮ ОЧИСТКИ ЛОГА
+// ОЧИСТКИ ЛОГА
+App\Debug\Log::cleanLog("log_custom");
 
-LocalRedirect('/otus/students_dz/homework2/');
+LocalRedirect('/homeworks/homework2/');
