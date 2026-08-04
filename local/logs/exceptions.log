@@ -1,0 +1,5 @@
+OTUS 2026-08-04 11:36:18 - Host: b24php84.localhost - UNCAUGHT_EXCEPTION - [DivisionByZeroError] 
+Division by zero (0)
+/home/bitrix/www/homeworks/homework2/writeexception.php:17
+----------
+

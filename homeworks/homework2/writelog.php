@@ -7,9 +7,15 @@ $APPLICATION->SetTitle("Добавление в лог");
             <a href="/local/logs/log_custom.log">Файл лога</a>,
             в лог добавленно 'Открыта страница writelog.php'
         </li>
+        <li class="list-group-item">
+            <a href="clearlog.php">Очистить</a> файл лога
+        </li>
+         <li class="list-group-item">
+            <a href="/homeworks/homework2/">Вернуться</a> на страницу задания
+        </li>
     </ul>
 <?
-// ТУТ ДОБАВИТЬ СВОЮ ФУНКЦИЮ ДОБАВЛЕНИЯ В ЛОГ
-
+//  ДОБАВЛЕНИЯ В ЛОГ
+App\Debug\Log::addLog('Открыта страница writelog.php',false,"log_custom",false);
 ?>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
