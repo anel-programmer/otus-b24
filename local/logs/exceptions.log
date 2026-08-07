@@ -3,3 +3,116 @@ Division by zero (0)
 /home/bitrix/www/homeworks/homework2/writeexception.php:17
 ----------
 
+OTUS 2026-08-07 22:22:28 - Host: b24php84.localhost - UNKNOWN - [Bitrix\Main\SystemException] 
+Error in agent CCloudStorage::ResizeImageCleanAgent();. (0)
+/home/bitrix/www/bitrix/modules/main/classes/general/agent.php:516
+#0: CAgent::ExecuteAgents()
+	/home/bitrix/www/bitrix/modules/main/classes/general/agent.php:357
+#1: CAgent::CheckAgents()
+	
+#2: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:872
+#3: Bitrix\Main\Application->runBackgroundJobs()
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:387
+#4: Bitrix\Main\Application->terminate(integer)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:339
+#5: Bitrix\Main\Application->end()
+	/home/bitrix/www/bitrix/modules/main/classes/general/main.php:3711
+#6: CMain::FinalActions(string)
+	/home/bitrix/www/bitrix/modules/main/include/epilog_admin_after.php:55
+#7: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/admin/update_system_call.php:367
+#8: require_once(string)
+	/home/bitrix/www/bitrix/admin/update_system_call.php:2
+----------
+Previous exception: [Error] 
+Call to undefined method CCloudStorage::ResizeImageCleanAgent() (0)
+/home/bitrix/www/bitrix/modules/main/classes/general/agent.php(508) : eval()'d code:1
+#0: eval
+	/home/bitrix/www/bitrix/modules/main/classes/general/agent.php:508
+#1: CAgent::ExecuteAgents()
+	/home/bitrix/www/bitrix/modules/main/classes/general/agent.php:357
+#2: CAgent::CheckAgents()
+	
+#3: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:872
+#4: Bitrix\Main\Application->runBackgroundJobs()
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:387
+#5: Bitrix\Main\Application->terminate(integer)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:339
+#6: Bitrix\Main\Application->end()
+	/home/bitrix/www/bitrix/modules/main/classes/general/main.php:3711
+#7: CMain::FinalActions(string)
+	/home/bitrix/www/bitrix/modules/main/include/epilog_admin_after.php:55
+#8: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/admin/update_system_call.php:367
+#9: require_once(string)
+	/home/bitrix/www/bitrix/admin/update_system_call.php:2
+----------
+
+OTUS 2026-08-07 22:23:10 - Host: b24php84.localhost - UNKNOWN - [Error] 
+Class "Bitrix\Main\Entity\EventResult" not found (0)
+/home/bitrix/www/bitrix/modules/market/lib/Tag/Tag.php:142
+#0: Bitrix\Market\Tag\TagTable::check()
+	/home/bitrix/www/bitrix/modules/market/lib/Tag/Tag.php:137
+#1: Bitrix\Market\Tag\TagTable::onBeforeUpdate(object)
+	
+#2: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/orm/event.php:151
+#3: Bitrix\Main\ORM\Event->send()
+	/home/bitrix/www/bitrix/modules/main/lib/orm/data/datamanager.php:1822
+#4: Bitrix\Main\ORM\Data\DataManager::callOnBeforeUpdateEvent(object, array, object)
+	/home/bitrix/www/bitrix/modules/main/lib/orm/data/datamanager.php:1277
+#5: Bitrix\Main\ORM\Data\DataManager::update(array, array)
+	/home/bitrix/www/bitrix/modules/market/lib/Tag/Manager.php:129
+#6: Bitrix\Market\Tag\Manager::finalize()
+	
+#7: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:872
+#8: Bitrix\Main\Application->runBackgroundJobs()
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:387
+#9: Bitrix\Main\Application->terminate(integer)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:339
+#10: Bitrix\Main\Application->end()
+	/home/bitrix/www/bitrix/modules/main/classes/general/main.php:3711
+#11: CMain::FinalActions(string)
+	/home/bitrix/www/bitrix/modules/main/include/epilog_admin_after.php:55
+#12: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/admin/update_system_call.php:367
+#13: require_once(string)
+	/home/bitrix/www/bitrix/admin/update_system_call.php:2
+----------
+
+OTUS 2026-08-07 22:23:10 - Host: b24php84.localhost - UNCAUGHT_EXCEPTION - [Error] 
+Class "Bitrix\Main\Entity\EventResult" not found (0)
+/home/bitrix/www/bitrix/modules/market/lib/Tag/Tag.php:142
+#0: Bitrix\Market\Tag\TagTable::check()
+	/home/bitrix/www/bitrix/modules/market/lib/Tag/Tag.php:137
+#1: Bitrix\Market\Tag\TagTable::onBeforeUpdate(object)
+	
+#2: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/orm/event.php:151
+#3: Bitrix\Main\ORM\Event->send()
+	/home/bitrix/www/bitrix/modules/main/lib/orm/data/datamanager.php:1822
+#4: Bitrix\Main\ORM\Data\DataManager::callOnBeforeUpdateEvent(object, array, object)
+	/home/bitrix/www/bitrix/modules/main/lib/orm/data/datamanager.php:1277
+#5: Bitrix\Main\ORM\Data\DataManager::update(array, array)
+	/home/bitrix/www/bitrix/modules/market/lib/Tag/Manager.php:129
+#6: Bitrix\Market\Tag\Manager::finalize()
+	
+#7: call_user_func_array(array, array)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:872
+#8: Bitrix\Main\Application->runBackgroundJobs()
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:387
+#9: Bitrix\Main\Application->terminate(integer)
+	/home/bitrix/www/bitrix/modules/main/lib/application.php:339
+#10: Bitrix\Main\Application->end()
+	/home/bitrix/www/bitrix/modules/main/classes/general/main.php:3711
+#11: CMain::FinalActions(string)
+	/home/bitrix/www/bitrix/modules/main/include/epilog_admin_after.php:55
+#12: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/admin/update_system_call.php:367
+#13: require_once(string)
+	/home/bitrix/www/bitrix/admin/update_system_call.php:2
+----------
+
