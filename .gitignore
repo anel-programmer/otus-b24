@@ -48,7 +48,7 @@
 /kb/
 /knowledge/
 /license_restriction.php
-/local/log/
+/local/logs/
 /mail/
 /market/
 /marketing/
@@ -83,3 +83,5 @@
 /vote-result/
 /welcome/
 /workgroups/
+local/logs/exceptions.log
+local/logs/log_custom.log
