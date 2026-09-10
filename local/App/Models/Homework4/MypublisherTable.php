@@ -14,6 +14,6 @@ use Bitrix\Main\ORM\Fields\IntegerField;
  */
 class MypublisherTable extends AbstractIblockPropertyValuesTable
 {
-    public const IBLOCK_ID = 25;
+    public const IBLOCK_ID = 19;
 
 }

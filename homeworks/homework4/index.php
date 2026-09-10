@@ -43,7 +43,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=25&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
+                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=19&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Список на ИБ 1 (Списки => Издательства)
@@ -54,7 +54,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=22&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
+                <a href="/bitrix/admin/iblock_list_admin.php?IBLOCK_ID=18&type=lists&lang=ru&find_section_section=0&SECTION_ID=0&apply_filter=Y"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Список на ИБ 2 (Списки => Авторы книг)
