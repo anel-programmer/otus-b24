@@ -35,11 +35,11 @@ if (!Application::getConnection(HWTable::getConnectionName())->isTableExists(
  * Добавление записей если таблица существует и пустая
  */
 if (Application::getConnection(HWTable::getConnectionName())->isTableExists(
-            ORM\Entity::getInstance(HWTable::class)->getDBTableName() && (HWTable::getCount()==0)
-        )
+            ORM\Entity::getInstance(HWTable::class)->getDBTableName()
+        )  && (HWTable::getCount()==0)
 ) {
 
-
+    pr('добавление записей ');
     $lastId = HWTable::getCount();
     $result = HWTable::add( [
             'DATA' => 'Книга '.$lastId,
