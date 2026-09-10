@@ -12,7 +12,9 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
     <h1 class="mb-3"><? $APPLICATION->ShowTitle() ?></h1>
 
     <h4 class="mb-3">Пояснительная записка</h4>
+    
     <div>
+        Ссылка на GitHab - https://github.com/anel-programmer/otus-b24/tree/homework4 
        <ol>
         <li>Создала модель для кастомной таблицы НomeworkTable.php</li>
         <li>Создала 2 инфоблока "Издательства" и "Авторы книг"</li>
