@@ -16,7 +16,7 @@ use CIBlockElement;
 
 class AuthorsTable extends DataManager
 {
-    public const IBLOCK_ID = 22;
+    public const IBLOCK_ID = 18;
     protected static ?array $properties = null;
 
      /**
