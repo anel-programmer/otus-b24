@@ -14,17 +14,15 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
 
 <h4 class="mb-3">Пояснительная записка</h4>
 <div>
-    Тут добавить описание того что и как было реализовано.
+    <ol>
+        <li>Создала ИБ Заявки. В нем свойства. Сделка с типом "Привязка к элементам CRM", Ответственный - тип "Привязка к сотрудникам", Сумма - тип "Деньги"</li>
+        <li>Создала файл events.php для того чтоб именно в нем размещать подключения событий и не захломлять init.php</li>
+        <li>Создала каталог App\Events и в нем 2 класса IblockHandler (с методом изменения суммы и ответственного в привязанной сделке) и DealHandler (с методом изменения суммы и ответственного после обновления сделки)</li>
+    </ol>
 </div>
 <br>
 <br>
 <hr>
-
-
-
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
-    </div>
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -33,7 +31,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/20/view/0/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на ИБ Заявки
@@ -57,10 +55,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=%2Flocal%2FApp%2FEvents%2FDealHandler.php&site=s1&lang=ru"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Файл с используемыми событиями Сделки: НАЗВАНИЕ_СОБЫТИЯ - ФУНКЦИЯ
+                    Файл с используемыми событиями Сделки: OnAfterCrmDealUpdate - App\Events\DealHandler::onCrmDealAfterUpdate
                 </span>
                     <span class="badge bg-warning">
                     файл в админке
@@ -69,10 +67,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=%2Flocal%2FApp%2FEvents%2FIblockHandler.php&site=s1&lang=ru"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Файл с используемыми событиями Заявки: НАЗВАНИЕ_СОБЫТИЯ - ФУНКЦИЯ
+                    Файл с используемыми событиями Заявки: OnAfterIBlockElementUpdate - App\Events\IblockHandler::onElementAfterUpdate
                 </span>
                     <span class="badge bg-warning">
                     файл в админке
@@ -81,10 +79,10 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=%2Flocal%2Fphp_interface%2Fevents.php&site=s1&lang=ru"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
+                    events.php файл в котором подключаются события
                 </span>
                     <span class="badge bg-warning">
                     файл в админке

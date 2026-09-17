@@ -11,6 +11,12 @@ if (file_exists(__DIR__.'/../App/autoload.php'))
     require_once __DIR__.'/../App/autoload.php';
 }
 
+//Кастомные события
+if (file_exists(__DIR__.'/events.php'))
+{
+    require_once __DIR__.'/events.php';
+}
+
 // вывод данных 
 function pr($var, $type = false) {
     echo '<pre style="font-size:10px; border:1px solid #000; background:#FFF; text-align:left; color:#000;">';
