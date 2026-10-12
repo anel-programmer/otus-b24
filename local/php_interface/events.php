@@ -24,4 +24,12 @@ $asset = Asset::getInstance();
     'OnAfterCrmDealUpdate',
     ['App\Events\DealHandler','onCrmDealAfterUpdate']
 );
+/**
+ * обработчик, который добавляет пустую вкладку "custom"
+ */
+ /*$eventManager->addEventHandler(
+    'crm',
+    'onEntityDetailsTabsInitialized',
+    ['App\Events\TabHandler','setCustomTabs']
+);*/
 

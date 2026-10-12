@@ -19,7 +19,7 @@ $nav->allowAllRecords(false)->setPageSize($arResult['NUM_PAGE'])->initFromUri();
 
 // echo 'TEMPLATE';
 // pr($arParams); 
-// pr($arResult); 
+ pr($arResult); 
 // pr($templateFolder); 
 // pr($componentPath); 
 ?>
@@ -39,9 +39,13 @@ $APPLICATION->includeComponent(
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_HISTORY" => "N",
 		"SHOW_ROW_CHECKBOXES" =>$arResult['SHOW_ROW_CHECKBOXES'],
-		"SHOW_SELECTED_COUNTER" => false,
-		"SHOW_PAGESIZE" => false,
-		"TOTAL_ROWS_COUNT" =>$arResult['COUNT']
+		"SHOW_SELECTED_COUNTER" => true,
+		"SHOW_PAGESIZE" => true,
+		"SHOW_ROW_ACTIONS_MENU" =>true,
+		"SHOW_ACTION_PANEL" => true,
+		"SHOW_GROUP_EDIT_BUTTON" => true,
+		"TOTAL_ROWS_COUNT" =>$arResult['COUNT'],
+
 	]
 );
 ?>
