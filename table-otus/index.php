@@ -71,12 +71,12 @@ foreach ($data as $key => $item) {
 
 <?
 $APPLICATION->IncludeComponent(
-    "otus:table.views", 
+    "otus:table.show", 
     "list", 
     array(
         "COMPONENT_TEMPLATE" => "list",
         "SHOW_CHECKBOXES" => "Y",
-        "NUM_PAGE" => "1"
+        "NUM_PAGE" => "3"
     ),
     false
 );
