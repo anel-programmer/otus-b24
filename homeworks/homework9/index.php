@@ -14,16 +14,18 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
 
 <h4 class="mb-3">Пояснительная записка</h4>
 <div>
-    Тут добавить описание того что и как было реализовано.
+     Ссылка на GitHab - https://github.com/anel-programmer/otus-b24/tree/homework9 
+       <ol>
+        <li>Создала список "Заказчики" и установила галочку "Включить поддержку бизнес-процессов" в настройках списка</li>
+        <li>Создала кастомный активити local/activities/custom/companybyinnactivity, под названием "Компания по инн" в разделе "Прочее"
+            <p>Этот активити выполняет получение данных компании по инн и добавление компании в CRM -> Компании</p>
+        </li>
+        <li>Для списка "Заказчики" создала последовательный бизнес-процесс "Данные компании из сервиса DADATA", который запускается при добавлении элемента.</li>
+       </ol>
 </div>
 <br>
 <br>
 <hr>
-
-
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
-    </div>
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -32,7 +34,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/22/bp_edit/6/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на БП
@@ -44,7 +46,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/22/view/0/?list_section_id="
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на ИБ
@@ -68,7 +70,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/bitrix/admin/fileman_file_view.php?path=%2Flocal%2Factivities%2Fcustom%2Fcompanybyinnactivity%2Fcompanybyinnactivity.php&site=s1&lang=ru"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на активити
@@ -79,17 +81,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
                 </a>
             </li>
 
-            <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
-                   class="d-flex justify-content-between align-items-center">
-                <span>
-                    Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
-                </span>
-                    <span class="badge bg-warning">
-                    файл в админке
-                </span>
-                </a>
-            </li>
+            
         </ul>
     </div>
 
