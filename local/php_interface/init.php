@@ -16,6 +16,17 @@ if (file_exists(__DIR__.'/events.php'))
 {
     require_once __DIR__.'/events.php';
 }
+// подключение класса для бизнес-процесса Обходной лист
+if (file_exists(__DIR__.'/classes/LKIblock.php'))
+{
+    require_once __DIR__.'/classes/LKIblock.php';
+}
+
+if (file_exists(__DIR__.'/classes/Dadata.php'))
+{
+    require_once __DIR__.'/classes/Dadata.php';
+}
+
 
 // вывод данных 
 function pr($var, $type = false) {
