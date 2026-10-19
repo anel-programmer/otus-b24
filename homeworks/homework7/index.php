@@ -14,16 +14,24 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
 
 <h4 class="mb-3">Пояснительная записка</h4>
 <div>
-    Тут добавить описание того что и как было реализовано.
+    <div style="font-style: italic;">
+       <ol>
+        <li>Создала список Бронирование с полями: ФИО пациента, Время записи, Процедура</li>
+        <li>Создала компонент otus:reservation.field который выводит список процедур, при клике на процедуру, открывает popup окно с полями ФИО пациента и дата и время.
+            После нажатия на кнопку "Записать" в этом окне добавляет запись с ФИО пациента и выбранным временем а список "Бронирование".
+        </li>
+        <li>Добавила кастомное свойство "Бронирование записи" в котором в метод отображения значения в списке в публичной части подключила компонент otus:reservation.field,
+            в методах редактирования значения в списке в публичной части, а также при добавлении и редактировании в админке сделала выпадающие списки для выбора процедур.
+            В настройках кастомного свойства добавила списки с выбором типа инфоблока и инфоблока, для того чтоб можно было указать инфоблок откуда должны загружаться процедуры, 
+            и инфоблок - куда должны записываться данные о новой брони. 
+        </li>
+       </ol>
+    </div>
 </div>
 <br>
 <br>
 <hr>
 
-
-    <div style="color: red;font-style: italic;">
-        &darr;&darr;&darr; ссылки ниже заменить на свои &darr;&darr;&darr;
-    </div>
 
     <div class="card shadow-sm mt-4">
         <div class="card-header bg-success text-white">
@@ -32,7 +40,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
         <ul class="list-group list-group-flush">
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/23/view/0/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на список бронирование
@@ -44,7 +52,7 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="#"
+                <a href="/services/lists/16/view/0/"
                    class="d-flex justify-content-between align-items-center">
                 <span>
                     Ссылка на список врачей
@@ -56,16 +64,28 @@ Asset::getInstance()->addCss('//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bo
             </li>
 
             <li class="list-group-item list-group-item-action">
-                <a href="/bitrix/admin/fileman_file_view.php?path=/local/App/Debug/Log.php"
+                <a href="/bitrix/admin/fileman_file_view.php?path=%2Flocal%2FApp%2FUserTypes%2FCIBlockPropertyReservation.php&site=s1&lang=ru"
                    class="d-flex justify-content-between align-items-center">
                 <span>
-                    Ссылки на просмотр кода основных файлов ДЗ (связь таблиц, ORM, классы  и т.д.)
+                    Ссылки на просмотр кода файла с описанием кастомного типа свойства (Бронирование записи) 
                 </span>
                     <span class="badge bg-warning">
                     файл в админке
                 </span>
                 </a>
             </li>
+            <li class="list-group-item list-group-item-action">
+                <a href="/bitrix/admin/fileman_admin.php?lang=ru&path=%2Flocal%2Fcomponents%2Fotus%2Freservation.field&site=s1"
+                   class="d-flex justify-content-between align-items-center">
+                <span>
+                    Компонент otus:reservation.field который подключается в методе отображения значения в списке в публичной части
+                </span>
+                    <span class="badge bg-warning">
+                    файл в админке
+                </span>
+                </a>
+            </li>
+           
         </ul>
     </div>
 
