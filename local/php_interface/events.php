@@ -33,3 +33,25 @@ $asset = Asset::getInstance();
     ['App\Events\TabHandler','setCustomTabs']
 );*/
 
+/**
+ * Подключение события которое кастомный тип поля рейтинг
+ */
+ $eventManager->addEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    ['App\UserTypes\CIBlockPropertyRating','GetUserTypeDescription']
+);
+
+$eventManager->addEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    ['App\UserTypes\CIBlockPropertyReservation','GetUserTypeDescription']
+);
+
+$eventManager->addEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    ['App\UserTypes\IBLink','GetUserTypeDescription']
+);
+
+

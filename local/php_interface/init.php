@@ -38,4 +38,25 @@ function pr($var, $type = false) {
     echo '</pre>';
 }
 
+/**
+ * Подключение события которое кастомный тип поля рейтинг
+ */
+ /*  $eventManager->addEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    ['CIBlockPropertyRating','GetUserTypeDescription']
+);
+
+class CIBlockPropertyRating 
+{
+    public static function GetUserTypeDescription()
+    {
+        return [
+            'USER_TYPE' => 'rating',
+            'DESCRIPTION' => 'Рейтинг (звездочки)',
+            'PROPERTY_TYPE' => 'N',
+            'CLASS_NAME' => 'CIBlockPropertyRating',
+        ];
+    }
+} */
 
