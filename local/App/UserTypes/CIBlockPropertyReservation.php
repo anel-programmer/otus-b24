@@ -81,14 +81,17 @@ class CIBlockPropertyReservation
 	public static function preparePropValue(string $val, array $arProperty)
     {
 		
-		$explVal = explode(';', $val); //разбиваем строку на массив частей с разделителем ;
+		if ($val!==''){
+            $explVal = explode(';', $val); //разбиваем строку на массив частей с разделителем ;
 
-        return [
-            'ID' => current($explVal),
-            'NAME' => array_pop($explVal),
-            'FIO' => CurrentUser::get()->getFullName() ?: CurrentUser::get()->getLogin(),
-            'IBLOCK_ID' => intval($arProperty["USER_TYPE_SETTINGS"]["IBLOCK_ID_TO"]),
-        ];
+            return [
+                'ID' => current($explVal),
+                'NAME' => array_pop($explVal),
+                'FIO' => CurrentUser::get()->getFullName() ?: CurrentUser::get()->getLogin(),
+                'IBLOCK_ID' => intval($arProperty["USER_TYPE_SETTINGS"]["IBLOCK_ID_TO"]),
+            ];
+        }
+        return [];
     }
 
 
