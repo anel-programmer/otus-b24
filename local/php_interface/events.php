@@ -24,6 +24,14 @@ $asset = Asset::getInstance();
     'OnAfterCrmDealUpdate',
     ['App\Events\DealHandler','onCrmDealAfterUpdate']
 );
+/**
+ * обработчик, который добавляет пустую вкладку "custom"
+ */
+ /*$eventManager->addEventHandler(
+    'crm',
+    'onEntityDetailsTabsInitialized',
+    ['App\Events\TabHandler','setCustomTabs']
+);*/
 
 /**
  * Подключение события которое кастомный тип поля рейтинг

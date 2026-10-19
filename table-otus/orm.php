@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Компонент списка таблицы базы данных");
 
 use Bitrix\Main\Type;
-use Models\ClientsTable as Clients;
+use App\Models\ClientsTable as Clients;
 
 
 use \Bitrix\Iblock\PropertyEnumerationTable;
