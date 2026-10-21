@@ -54,4 +54,11 @@ $eventManager->addEventHandler(
     ['App\UserTypes\IBLink','GetUserTypeDescription']
 );
 
+// подключение JS модуля из пространства otus, который находится в \local\js\
+// модуль otus.console демо, который выводит в консоль фразу  Hi, from Otus.
+//\Bitrix\main\UI\Extension::load('otus.console');
+
+// подключение JS модуля из пространства otus, который находится в \local\js\
+// модуль otus.console демо, который выводит в консоль фразу  Hi, from Otus.
+//\Bitrix\main\UI\Extension::load('otus.workday');
 
