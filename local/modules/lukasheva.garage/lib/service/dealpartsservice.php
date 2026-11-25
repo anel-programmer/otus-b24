@@ -136,7 +136,7 @@ class DealPartsService
                         'PRODUCT_ID' => $item['ID'],
                         'QUANTITY' => $item['QUANTITY_BUY'],
                     ];
-                    \App\Debug\Log::addLog($arFieldsDetail);
+
                     $resDetail = DetailTable::add($arFieldsDetail);
                     if (!$resDetail->isSuccess()) {
                         \App\Debug\Log::addLog((implode('; ', $resDetail->getErrorMessages())));
@@ -204,7 +204,7 @@ class DealPartsService
     public static function approveRequest(int $requestId) : Result
     {
         $result = new Result();
-        \App\Debug\Log::addLog('approveRequest '.$requestId);
+
         try {
             // проверяем подключение модуля
             if (!Loader::includeModule('crm') || !Loader::includeModule('catalog')) {
@@ -286,7 +286,7 @@ class DealPartsService
         catch (\Throwable $e)
         {
             $result->addError(new Error(Loc::getMessage('GARAGE_SERVICE_UPDATE_ERROR', ['#ERROR#' => $e->getMessage()])));
-            \App\Debug\Log::addLog(Loc::getMessage('GARAGE_SERVICE_UPDATE_ERROR', ['#ERROR#' => $e->getMessage()]));
+            
             return $result;
         }
     }
@@ -299,7 +299,7 @@ class DealPartsService
     public static function rejectRequest(int $requestId) : Result
     {
         $result = new Result();
-        \App\Debug\Log::addLog('rejectRequest '.$requestId);
+
         try {
            
             //проверка статуса заявки
