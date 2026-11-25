@@ -44,8 +44,38 @@ $tabs = [
         'TAB' => Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_TAB_MAIN'),
         'TITLE' => Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_TAB_MAIN_TITLE'),
     ],
+    [
+        'DIV' => 'agent',
+        'TAB' => Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_TAB_AGENT'),
+        'TITLE' => Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_TAB_AGENT_TITLE'),
+    ],
 ];
 $tabControl = new CAdminTabControl('garageTabControl', $tabs);
+
+if ($request->isPost() && $request->getPost('runagent') !== null && check_bitrix_sessid()) {
+    if (Loader::includeModule('lukasheva.garage')) {
+        $res = \CAgent::GetList([],['NAME' => 'Lukasheva\Garage\Agent\UpdateQuantity::update();', 'MODULE_ID'=>'lukasheva.garage']);
+        $exists = $res->fetch();
+
+        if ($exists) {
+            Lukasheva\Garage\Agent\UpdateQuantity::update();   
+            LocalRedirect($request->getRequestedPage() . '?mid=' . urlencode($moduleId)
+                . '&lang=' . LANGUAGE_ID . '&agent=done&' . $tabControl->ActiveTabParam());
+        // CAdminMessage::ShowNote(Loc::getMessage('LUKASHEVA_GARAGE_RUN_AGENT_DONE'));  
+        }
+        else {
+            LocalRedirect($request->getRequestedPage() . '?mid=' . urlencode($moduleId)
+                . '&lang=' . LANGUAGE_ID . '&agent=error&' . $tabControl->ActiveTabParam());
+        // CAdminMessage::ShowMessage(Loc::getMessage('LUKASHEVA_GARAGE_RUN_AGENT_ERROR'));
+        }
+    } 
+}
+
+if ($request->get('agent') === 'done') {
+    CAdminMessage::ShowNote(Loc::getMessage('LUKASHEVA_GARAGE_RUN_AGENT_DONE'));
+} elseif ($request->get('agent') === 'error') {
+    CAdminMessage::ShowMessage(Loc::getMessage('LUKASHEVA_GARAGE_RUN_AGENT_ERROR'));
+}
 
 $error = '';
 
@@ -149,6 +179,13 @@ $tabControl->Begin();
             <input type="number" name="product_section_id" id="product_section_id" value="<?=$currentSection ?>" >
         </td>
     </tr>
+    <?php $tabControl->BeginNextTab(); ?> 
+    <tr>
+    <td colspan="2">
+        <input type="submit" name="runagent"
+            value="<?= HtmlFilter::encode(Loc::getMessage('LUKASHEVA_GARAGE_RUN_AGENT')) ?>">
+    </td>
+</tr>
     <?php $tabControl->Buttons(); ?>
     <input type="submit" name="save" class="adm-btn-save"
            value="<?= HtmlFilter::encode(Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_SAVE')) ?>">
