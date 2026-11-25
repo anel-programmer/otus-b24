@@ -11,3 +11,4 @@ $MESS['LUKASHEVA_GARAGE_OPTIONS_BP'] = 'ID шаблона бизнес-проц�
 $MESS['LUKASHEVA_GARAGE_OPTIONS_GROUP'] = 'Группа отдела закупок';
 $MESS['LUKASHEVA_GARAGE_OPTIONS_HEAD_GROUP'] = 'Руководитель отдела закупок';
 $MESS['LUKASHEVA_GARAGE_OPTIONS_NO_VALUE'] = 'не выбран';
+$MESS['LUKASHEVA_GARAGE_SECTION_ID'] = 'ID раздела с запчастями в каталоге';

@@ -20,6 +20,7 @@ class UpdateQuantity
         try {
             //получить ID каталога
             $catalog_id = \Bitrix\Main\Config\Option::get('crm', 'default_product_catalog_id'); 
+            $section_id = (int)Option::get('lukasheva.garage', 'product_section_id');
                     
             $options = [
                 "socketTimeout" => 10, // Таймаут соединения, сек
@@ -37,7 +38,7 @@ class UpdateQuantity
                 'filter' => [
                     '=IBLOCK_ELEMENT.IBLOCK_ID' => $catalog_id,
                     'IBLOCK_ELEMENT.ACTIVE' => 'Y',
-                    '=IBLOCK_ELEMENT.IBLOCK_SECTION_ID' => 12,
+                    '=IBLOCK_ELEMENT.IBLOCK_SECTION_ID' => $section_id,
                     '=TYPE' => ProductTable::TYPE_PRODUCT,
                 ],
             ]);

@@ -12,7 +12,8 @@ if (Loader::includeModule('lukasheva.garage')) {
     $exists = $res->fetch();
 
     if ($exists) {
-        Lukasheva\Garage\Agent\UpdateQuantity::update();      
+        Lukasheva\Garage\Agent\UpdateQuantity::update();   
+        echo('Агент успешно отработал.');   
     }
     else {
         echo('Агент не найден');
