@@ -94,8 +94,7 @@ BX.Lukasheva.Garage = {
                             Object.keys(inputs).forEach(function(code) {
                                 _fields[code] = inputs[code].value;
                             });
-                            console.log(_fields);
-
+                            
                             BX.ajax.runComponentAction("lukasheva:cars.table","save", {
                                 mode: "class", //это означает, что мы хотим вызывать действие из class.php
                                 data: {
@@ -105,7 +104,7 @@ BX.Lukasheva.Garage = {
                                     }, 
                             }).then(function (response) {
                                 //сюда будут приходить ответ, у которого status == 'success'
-                                console.log('success '+response);
+                                
                                 popup.close()
 
                                 //получаем объект grid-a с авто по ID
@@ -116,7 +115,7 @@ BX.Lukasheva.Garage = {
                                 }
                             }, function (response) {
                                 //сюда будут приходить все ответы, у которых status !== 'success'
-                                console.log(response);
+                                
                                 errorNode.textContent = response.errors[0].message;
                                 errorNode.style.display = 'block';
                             });
@@ -160,13 +159,13 @@ BX.Lukasheva.Garage = {
     },
     view: function(itemId) {
         //создает popup окно с данными определенной машины
-        console.log('view '+itemId);
+        
         BX.ajax.runComponentAction("lukasheva:cars.table","view", {
             mode: "class", 
             data: {car_id: itemId},  
             }).then(function (response) {
                 //сюда будут приходить ответ, у которого status == 'success'
-                console.log(response);
+                
                 var popup = BX.PopupWindowManager.create("car-view"+itemId, null, {
                     titleBar: response.data.title,
                     content: response.data.html,
@@ -222,8 +221,6 @@ BX.Lukasheva.Garage = {
     },
     add: function(contactId){
 
-        console.log('add '+contactId);
-        
         BX.Lukasheva.Garage.getmarksmodels(function () {
             BX.Lukasheva.Garage.openForm(contactId, 0, {});
         });
@@ -231,32 +228,32 @@ BX.Lukasheva.Garage = {
       
     },
     getmarksmodels: function(callback) {
-        console.log('getmarksmoleks');
+        
         BX.ajax.runComponentAction("lukasheva:cars.table","dictionary", {
             mode: "class", 
             data: {},  
             }).then(function (response) {
                 //сюда будут приходить ответ, у которого status == 'success'
-                console.log(response);
+                
                 BX.Lukasheva.Garage.dictionary = response.data;
                 callback(response.data);
                
             });
     },
     newdeal: function(car_id) {
-        console.log('newdeal '+car_id);
+        
         BX.ajax.runComponentAction("lukasheva:cars.table","newdeal", {
             mode: "class", 
             data: {car_id: car_id},  
             }).then(function (response) {
                 //сюда будут приходить ответ, у которого status == 'success'
-                console.log(response);
+                
                 let dealId = response.data.id;
                 BX.SidePanel.Instance.open('/crm/deal/details/' + dealId + '/');
                
             }, function (response) {
                 //сюда будут приходить все ответы, у которых status !== 'success'
-                console.log(response);
+                
                 BX.UI.Dialogs.MessageBox.alert(response.errors[0].message);
             });
     }

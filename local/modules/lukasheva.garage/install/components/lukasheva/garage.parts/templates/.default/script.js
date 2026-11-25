@@ -3,7 +3,7 @@ BX.namespace('Lukasheva.GarageParts'); // создали пространств�
 BX.Lukasheva.GarageParts = {
     send: function(dealId, gridId){
 
-        console.log('send dealId = '+dealId + ' gridId = '+ gridId);
+        
         // Получить инстанс грида по его ID
         let gridParts = BX.Main.gridManager.getInstanceById(gridId);
         if (!gridParts) {
@@ -13,7 +13,6 @@ BX.Lukasheva.GarageParts = {
         }
         //Получить идентификаторы отмеченных строк
         let selectedRows = gridParts.getRows().getSelectedIds();   
-        console.log(selectedRows);
         
         if (selectedRows.length <= 0){
             BX.UI.Dialogs.MessageBox.alert(BX.message('GARAGE_PARTS_SEND_ERROR'));
@@ -27,13 +26,11 @@ BX.Lukasheva.GarageParts = {
             },  
             }).then(function (response) {
                 //сюда будут приходить ответ, у которого status == 'success'
-                console.log(response);
                 let message = BX.message('GARAGE_PARTS_SEND_SUCCESS').replace('#NUM#', response.data);
                 BX.UI.Dialogs.MessageBox.alert(message);
                
             }, function (response) {
                 //сюда будут приходить все ответы, у которых status !== 'success'
-                console.log(response);
                 BX.UI.Dialogs.MessageBox.alert(response.errors[0].message);
             });
     },
