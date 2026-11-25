@@ -452,7 +452,7 @@ class CarsTableComponent extends CBitrixComponent  implements Controllerable
          */
         $entityFields = [
 
-            'TITLE' => 'Сделка года',
+            'TITLE' => '',
             'STAGE_ID' => 'NEW',
             'PROBABILITY' => '100',
             'CURRENCY_ID' => 'RUB',
