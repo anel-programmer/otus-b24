@@ -27,6 +27,12 @@ if (file_exists(__DIR__.'/classes/Dadata.php'))
     require_once __DIR__.'/classes/Dadata.php';
 }
 
+//агенты
+if (file_exists(__DIR__.'/agents.php'))
+{
+    require_once __DIR__.'/agents.php';
+}
+
 
 // вывод данных 
 function pr($var, $type = false) {

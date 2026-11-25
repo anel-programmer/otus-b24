@@ -1,0 +1,3 @@
+<?php
+$MESS['MAKES_ENTITY_ID_FIELD'] = "ID";
+$MESS['MAKES_ENTITY_MAKE_FIELD'] = "Марка";

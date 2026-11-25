@@ -1,0 +1,6 @@
+<?php
+$MESS['DETAIL_ENTITY_ID_FIELD'] = "ID";
+$MESS['DETAIL_ENTITY_ID_ZAJAVKA_FIELD'] = "ID заявки";
+$MESS['DETAIL_ENTITY_PRODUCT_ID_FIELD'] = "ID товара";
+$MESS['DETAIL_ENTITY_QUANTITY_FIELD'] = "Количество";
+$MESS['DETAIL_ENTITY_QUANTITY_FIELD_ERROR'] = "Количество не должно быть меньше нуля";
