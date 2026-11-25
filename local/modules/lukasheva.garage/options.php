@@ -53,7 +53,8 @@ if ($request->isPost() && $request->getPost('save') !== null && check_bitrix_ses
     $categoryID = (int)$request->getPost('category_id');
     $groupID = (int)$request->getPost('group_id');
     $headOfDepartment = (int)$request->getPost('head_id');
-    $BpTemplateID = (int)$request->getPost('bp_template_id');
+    $BpTemplateID = (int)$request->getPost('bp_template_id'); 
+    $sectionID = (int)$request->getPost('product_section_id');
 
     if (!array_key_exists($groupID, $groupList)) {
         $error = Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_GROUP_ERROR');
@@ -62,6 +63,7 @@ if ($request->isPost() && $request->getPost('save') !== null && check_bitrix_ses
         Option::set($moduleId, 'head_id', $headOfDepartment);
         Option::set($moduleId, 'category_id', $categoryID);
         Option::set($moduleId, 'bp_template_id', $BpTemplateID);
+        Option::set($moduleId, 'product_section_id', $sectionID);
         LocalRedirect($request->getRequestedPage() . '?mid=' . urlencode($moduleId)
             . '&lang=' . LANGUAGE_ID . '&saved=Y&' . $tabControl->ActiveTabParam());
     }
@@ -79,6 +81,7 @@ $currentCategory = (int)Option::get($moduleId, 'category_id');
 $currentGroup = (int)Option::get($moduleId, 'group_id');
 $currentHeadOfDepartment = (int)Option::get($moduleId, 'head_id');
 $currentBp = (int)Option::get($moduleId, 'bp_template_id');
+$currentSection = (int)Option::get($moduleId, 'product_section_id');
 
  //получить список пользователей  
 $headOfDepartmentList = [];
@@ -134,10 +137,16 @@ $tabControl->Begin();
             </select>
         </td>
     </tr>
-     <tr>
+    <tr>
         <td width="40%"><label for="bp_template_id"><?= Loc::getMessage('LUKASHEVA_GARAGE_OPTIONS_BP') ?></label></td>
         <td width="60%">
             <input type="number" name="bp_template_id" id="bp_template_id" value="<?=$currentBp ?>" >
+        </td>
+    </tr>
+    <tr>
+        <td width="40%"><label for="product_section_id"><?= Loc::getMessage('LUKASHEVA_GARAGE_SECTION_ID') ?></label></td>
+        <td width="60%">
+            <input type="number" name="product_section_id" id="product_section_id" value="<?=$currentSection ?>" >
         </td>
     </tr>
     <?php $tabControl->Buttons(); ?>

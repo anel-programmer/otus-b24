@@ -70,7 +70,7 @@ class DealPartsService
         }
 
         //список запчастей и актуальное количество к каталоге
-
+        $section_id = (int)Option::get('lukasheva.garage', 'product_section_id');
         $result = ProductTable::getList([
             'select' => [
                 'ID',
@@ -79,7 +79,7 @@ class DealPartsService
             'filter' => [
                 '=IBLOCK_ELEMENT.IBLOCK_ID' => $catalog_id,
                 'IBLOCK_ELEMENT.ACTIVE' => 'Y',
-                '=IBLOCK_ELEMENT.IBLOCK_SECTION_ID' => 12,
+                '=IBLOCK_ELEMENT.IBLOCK_SECTION_ID' => $section_id,
                 '=TYPE' => ProductTable::TYPE_PRODUCT,
                 '@ID' => array_keys($listProducts)
             ],
